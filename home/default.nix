@@ -4,6 +4,7 @@
 	imports = [
 		./modules/programs/browser
 		./modules/programs/git
+		./modules/programs/nvim
 	];
 	
 	home.stateVersion = "26.05";
@@ -21,17 +22,7 @@
 	};
 
 	# --- Neovim ---
-	programs.neovim = {
-		enable = true;
-		defaultEditor = true;
-		viAlias = true;
-		vimAlias = true;
-		extraPackages = with pkgs; [
-			gcc ripgrep fd tree-sitter
-			lua-language-server nil nixfmt
-			qt6.qtdeclarative
-		];
-	};
+	my.nvim.enable = true;
 
 	# --- Zen Browser ---
 	my.browser.zen.enable = true;

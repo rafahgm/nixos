@@ -56,6 +56,8 @@
 	programs.niri.enable = true;
 	security.polkit.enable = true;
 	services.gnome.gnome-keyring.enable = true;
+	# O agent do 1Password substitui o do GCR (que sobrescrevia o SSH_AUTH_SOCK)
+	services.gnome.gcr-ssh-agent.enable = false;
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
 	services.greetd = {
